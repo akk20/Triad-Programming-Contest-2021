@@ -1,4 +1,5 @@
 # Triad Programming Contest 2021
+### http://icho.ncat.edu/triadcontest/
 
 ## Problem 1 - Locating an Antenna
 Imagine you need to erect an antenna to communicate with a number of fixed wireless stations. You want to position the antenna to get the best possible reception given the location of the wireless stations. The strength of the radio signal decreases proportionally to the cube of the distance of the transmission. Therefore, you want to position the antenna so that the sum of the cubes of the straight line distance from the antenna to each wireless station is a minimum. The location should be determined to within 0.1 meters.
@@ -116,7 +117,7 @@ Example output:
 `37`
 
 Given graphically, the answer is:
-(https://user-images.githubusercontent.com/64885462/114444568-0c17f700-9b9d-11eb-8e50-23138f2a8fb5.jpg)
+![P4_image](https://user-images.githubusercontent.com/64885462/114457370-f100b380-9bab-11eb-99c5-3fb8ee80e297.jpg)
 
 ## Problem 5 - Election
 One way to vote that reduces the chance of a run-off election works as follows:
@@ -224,7 +225,7 @@ Write a program that will read a set of friendship relationships and display `co
 · An N x N adjacency matrix where element i, k (column k of row i) of the matrix is 1 if node i has an edge to node k and zero if it does not.
 
 ![P8_image](https://user-images.githubusercontent.com/64885462/114446826-ac6f1b00-9b9f-11eb-99f7-926b603f270f.jpg)
-Adjacency matrix for the above graph
+Graph for the adjacency matrix in the input
  
 Example input in `connectivity.txt`:
 ```
