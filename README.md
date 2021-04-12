@@ -219,11 +219,11 @@ Some social networks allow you to specify other users as friends. Friends have a
 
 Write a program that will read a set of friendship relationships and display `connected` or `disconnected` if the directed graph is connected or not. Input to the program will come from a text file names `connectivity.txt`. The file will contain:
 
-* An integer specifying the number of graphs to check.  
+* An integer specifying the number of graphs to check.
 
-  For each graph:
-* An integer specifying the number of nodes or users in the graph.  There can be from 1 to 64 nodes in the graph.  Each node is numbers from 0 to N.
-* An N x N adjacency matrix where element i, k (column k of row i) of the matrix is 1 if node i has an edge to node k and zero if it does not.
+* For each graph:
+  * An integer specifying the number of nodes or users in the graph.  There can be from 1 to 64 nodes in the graph.  Each node is numbers from 0 to N.
+  * An N x N adjacency matrix where element i, k (column k of row i) of the matrix is 1 if node i has an edge to node k and zero if it does not.
 
 ![P8_image](https://user-images.githubusercontent.com/64885462/114446826-ac6f1b00-9b9f-11eb-99f7-926b603f270f.jpg)  
 Graph for the adjacency matrix in the input
