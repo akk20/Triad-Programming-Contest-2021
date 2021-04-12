@@ -1,6 +1,5 @@
 # Triad Programming Contest 2021
 
-
 ## Problem 1 - Locating an Antenna
 Imagine you need to erect an antenna to communicate with a number of fixed wireless stations. You want to position the antenna to get the best possible reception given the location of the wireless stations. The strength of the radio signal decreases proportionally to the cube of the distance of the transmission. Therefore, you want to position the antenna so that the sum of the cubes of the straight line distance from the antenna to each wireless station is a minimum. The location should be determined to within 0.1 meters.
 
@@ -24,7 +23,6 @@ Example input
 
 Output for the Example Input:
 `Optimal antenna location is 264.1 235.3`
-
 
 ## Problem 2 - Password Validator
 Write a program that will validate a password.
@@ -89,7 +87,6 @@ Example input:
 Example output:
 `23`
 
-
 ## Problem 4 - Efficient Snow Removal
 You've just started your first job out of college as the CIO for a city in the snowy north (think Michigan). Your city has a road network that can be depicted as a graph, where road segments are edges, and every intersection is a vertex. You need to make sure that, in the case of a blizzard, your snowplows clear a path from every place in the city to every other place in the city. However, some road segments are more expensive to plow than others, e.g., because of the street grade, the pavement type, or zoning restrictions in place. More specifically, each road segment has a cost associated with plowing it.
 
@@ -121,7 +118,7 @@ Example output:
 Given graphically, the answer is:
 (https://user-images.githubusercontent.com/64885462/114444568-0c17f700-9b9d-11eb-8e50-23138f2a8fb5.jpg)
 
-##Problem 5 - Election
+## Problem 5 - Election
 One way to vote that reduces the chance of a run-off election works as follows:
 Each voter marks the ballot with his first, second and third choice of candidates. (We assume the ballot has at least 3 candidates.) The “total vote” is the number of voters.
 
@@ -133,13 +130,6 @@ If there is a tie after the second choice votes are considered or if no candidat
 
 Example: Candidates A, B, and C are running, and there are 20 voters. The ballots result in the following count of votes for each candidate.
 
-                   A         B         C
-
-1st choice    7          7          6          no one over 50%
-
-2nd choice   8          8          4          tie between A and B
-
-3rd choice    5          4          11        C wins with 21 votes to A’s 20 and B’s 19
 |  | A | B | C |  |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 1st choice | 7 | 7 | 6 | no one over 50% |
@@ -160,3 +150,102 @@ B D C
 
 Output for the Sample Input:
 `B wins`
+
+## Problem 6 - Comment Removal
+A sneaky student has gotten hold of the instructor’s solution to a programming assignment written in Conbol. The student wants to submit the program as his own. To make it look like a student program, he wants to remove all the comments. You are to write a program that reads a text file called `comment.txt` containing the Conbol program source code and display the program text without the comments.
+
+There are two types of comments in Conbol. Comments can begin with two exclamation characters, `!!` and end with two exclamation characters, `!!`. This form of comment can extend across multiple lines or only a part of a line. All characters in the between `!!` and `!!` should be removed, including the `!!` and `!!` and any end of line characters inside the comment. The other form of a comment starts with exclamation dash, `!-` and continues to the end of the line. When you remove a comment of this form, eliminate the `!-` and all following characters. You should leave the end of line character.
+
+Conbol programs have string constants that are in `“double quotes”`.  If the start characters of a comment (either `!-` or `!!`) are inside a string constant, then they are part of the string constant and do not represent the start of a comment. String constants never span more than one line. It is possible that double quotes may appear inside a comment. If they do, they should be removed just like any other character. You may assume that the input program is syntactically correct.
+
+Example input from `comment.txt`:
+```
+public class { !!  My commented program !!
+     public static void main(String[] unused) { !- main method
+          String thing = "fake !- comment ";
+          thing = !! short comment !! "real stuff";
+          !!  long
+              comment
+          !!
+          thing = "!! " + "!! "; !- weird
+          int num = 5 / 6;
+     }
+}
+```
+
+Example output:
+```
+public class {
+     public static void main(String[] unused) {
+          String thing = "fake !- comment ";
+          thing =  "real stuff";
+          thing = "!! " + "!! ";
+          int num = 5 / 6;
+     }
+}
+```
+
+## Problem 7 - OPS Optimal Packing Service
+Optimal packing has become a necessary requirement for many package delivery services. The idea of getting as much as you can into a small compact space for delivery is key to a successful business. You are to write a program that will find the optimal combination of items which will utilize the given space. Each item has a value and a weight. You want to select the items to put into a box so that you maximize the sum of the value of all items in the box while not exceeding the weight limit for the box. To make things simple, all weights and values are integer numbers.
+
+Input is from the file `ops.txt` where the first input will be the maximum weight a box can hold. The sum of the weight of all items put in the box cannot exceed this amount.
+
+The next input, *n*, is the number of items available for shipping. There will be no more than 10 possible items. This is followed by n lines where each line contains a one character identifier (i.e. ‘A’ or ‘X’), the value of the item and the weight of the item, each separated by a space.
+
+The output should be the total value, total weight (formatted as shown below) followed on the next line by the one character identifiers of the items to be put in the box (in any order).
+
+`total value: V total weight: W`
+
+Sample input:
+```
+8
+4
+A 1 2
+B 2 2
+C 2 2
+Z 3 4
+```
+ 
+Sample output:
+```
+total value: 7 total weight: 8
+B C Z
+```
+
+## Problem 8 - Connectivity
+Some social networks allow you to specify other users as friends. Friends have additional access rights to your information, as does any other user who is a friend of the friend. This relationship extends to any level, such as a friend of a friend of a friend of a friend. The friend relationship is one way. If user A friends user B, this does not mean that user B friends user A. The owners of the social network want to know if everyone in the social network is connected to every other user. The friendship relationship can be modeled as a directed graph where the users are nodes and friendship is represented as a directed edge between the nodes. A user is never friends with themselves, so there are no edges that start and end at the same node. The problem is to determine if the friendship graph is fully connected. Is there a path from each node to every other node? The graph below is disconnected. While nodes 0 – 3 are connected, there is not a path from nodes 4 and 5 to the other nodes.
+
+Write a program that will read a set of friendship relationships and display `connected` or `disconnected` if the directed graph is connected or not. Input to the program will come from a text file names `connectivity.txt`. The file will contain:
+
+· An integer specifying the number of graphs to check.
+
+  For each graph:
+· An integer specifying the number of nodes or users in the graph.  There can be from 1 to 64 nodes in the graph.  Each node is numbers from 0 to N.
+· An N x N adjacency matrix where element i, k (column k of row i) of the matrix is 1 if node i has an edge to node k and zero if it does not.
+
+![P8_image](https://user-images.githubusercontent.com/64885462/114446826-ac6f1b00-9b9f-11eb-99f7-926b603f270f.jpg)
+Adjacency matrix for the above graph
+ 
+Example input in `connectivity.txt`:
+```
+2
+6
+0 1 0 0 1 0
+0 0 1 1 0 0
+1 1 0 0 0 0
+0 0 1 0 0 0
+0 0 0 0 0 1
+0 0 0 0 1 0
+4
+0 1 0 0
+0 0 1 1
+1 1 0 0
+0 0 1 0
+```
+ 
+
+Example output:
+```
+disconnected
+connected
+```
