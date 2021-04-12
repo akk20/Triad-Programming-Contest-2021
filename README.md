@@ -120,4 +120,43 @@ Example output:
 
 Given graphically, the answer is:
 (https://user-images.githubusercontent.com/64885462/114444568-0c17f700-9b9d-11eb-8e50-23138f2a8fb5.jpg)
-/P4_image.jpg?raw=true)
+
+##Problem 5 - Election
+One way to vote that reduces the chance of a run-off election works as follows:
+Each voter marks the ballot with his first, second and third choice of candidates. (We assume the ballot has at least 3 candidates.) The “total vote” is the number of voters.
+
+The first choice votes for each candidate are counted. If one candidate has more than 50% of the total vote, that candidate is elected.
+
+Otherwise, the second choice votes are added to each candidate’s total. If any candidate has more than 50% of the total vote, the candidate with the largest percent over 50% wins. For example, if one candidate has 55% and one candidate has 57%, the 57% candidate wins.
+
+If there is a tie after the second choice votes are considered or if no candidate has over 50% of the total vote, the third choice votes are added to each candidate’s total, and the candidate with the largest percent over 50% wins. If no candidate has over 50% of the total votes or there is a tie, a run-off election must be held.
+
+Example: Candidates A, B, and C are running, and there are 20 voters. The ballots result in the following count of votes for each candidate.
+
+                   A         B         C
+
+1st choice    7          7          6          no one over 50%
+
+2nd choice   8          8          4          tie between A and B
+
+3rd choice    5          4          11        C wins with 21 votes to A’s 20 and B’s 19
+|  | A | B | C |  |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| 1st choice | 7 | 7 | 6 | no one over 50% |
+| 2nd choice | 8 | 8 | 4 | tie between A and B |
+| 3rd choice | 5 | 4 | 11 | C wins with 21 votes to A’s 20 and B’s 19 |
+
+Write a program that determines the winner using this voting procedure. The input data is in a file named `ballot.txt`. You may assume that all voters always indicate a first, second, and third choice. The data has the ballots for each voter, with first, second, and third choices in that order. Candidates are named by single capital letters starting with A. The output is the letter of the candidate who won, or in the case of a tie, the program should display "tie". There will be no more than 100 voters and no more than 10 different candidates (identified as A to J).
+
+Sample Input:
+```
+A B C
+A B D
+B C A
+D C B
+A D B
+B D C
+```
+
+Output for the Sample Input:
+`B wins`
