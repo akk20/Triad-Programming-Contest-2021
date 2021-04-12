@@ -1,5 +1,6 @@
 # Triad Programming Contest 2021
-### http://icho.ncat.edu/triadcontest/
+Contest website with original problems/example input:  
+http://icho.ncat.edu/triadcontest/
 
 ## Problem 1 - Locating an Antenna
 Imagine you need to erect an antenna to communicate with a number of fixed wireless stations. You want to position the antenna to get the best possible reception given the location of the wireless stations. The strength of the radio signal decreases proportionally to the cube of the distance of the transmission. Therefore, you want to position the antenna so that the sum of the cubes of the straight line distance from the antenna to each wireless station is a minimum. The location should be determined to within 0.1 meters.
