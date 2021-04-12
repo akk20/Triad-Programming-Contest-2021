@@ -116,7 +116,7 @@ H I 7
 Example output:
 `37`
 
-Given graphically, the answer is:
+Given graphically, the answer is:&nbsp
 ![P4_image](https://user-images.githubusercontent.com/64885462/114457370-f100b380-9bab-11eb-99c5-3fb8ee80e297.jpg)
 
 ## Problem 5 - Election
@@ -225,7 +225,7 @@ Write a program that will read a set of friendship relationships and display `co
 · An N x N adjacency matrix where element i, k (column k of row i) of the matrix is 1 if node i has an edge to node k and zero if it does not.
 
 ![P8_image](https://user-images.githubusercontent.com/64885462/114446826-ac6f1b00-9b9f-11eb-99f7-926b603f270f.jpg)
-Graph for the adjacency matrix in the input
+&nbspGraph for the adjacency matrix in the input
  
 Example input in `connectivity.txt`:
 ```
